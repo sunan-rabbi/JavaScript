@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit clock</title>
+    <link href="/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white p-10 flex justify-around items-center">
+    <div>
+        <h1 class="text-xl font-semibold">Guess the number!</h1>
+
+        <div class="my-5">
+            <p class="text-lg">Rules:</p>
+            <p><span>1.</span> Number is between 1 to 1000.</p>
+            <p><span>2.</span> You have 10 guesses.</p>
+        </div>
+        <h1 class="text-2xl mb-5 text-red-500">Let's play!!!</h1>
+        <form class="flex flex-col gap-2 w-56" id="form" >
+            <p>Enter the your guess: </p>
+            <input class="border-2 rounded-md" type="number" id="number">
+            <button class="w-20 h-8 cursor-pointer bg-green-500 rounded-xl">
+                Guess
+            </button>
+        </form>
+    </div>
+    <div>
+        <h1 id="error" class="text-2xl mb-1 text-red-500"></h1>
+        <h1 id="cong" class="text-2xl mb-1 text-green-500"></h1>
+        <h1 id="result" class="text-lg mb-1 text-orange-500"></h1>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
