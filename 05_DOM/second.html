@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+</body>
+<script>
+    function addListItem(ListName) {
+        const li=document.createElement('li');
+        li.innerHTML=`${ListName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    function addListItemOp(ListName) {
+        const li=document.createElement('li');
+        const text=document.createTextNode(ListName);
+        li.appendChild(text);
+        document.querySelector('.language').appendChild(li);
+    }
+    
+    const languages=['C++','Java','Python','C#'];
+    languages.forEach(addListItemOp);
+
+    
+</script>
+
+</html>
